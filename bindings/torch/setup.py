@@ -144,6 +144,7 @@ min_compute_capability = min(compute_capabilities)
 print(f"Targeting C++ standard {cpp_standard}")
 
 base_nvcc_flags = [
+	"--allow-unsupported-compiler",
 	f"-std=c++{cpp_standard}",
 	"--extended-lambda",
 	"--expt-relaxed-constexpr",
